@@ -1,0 +1,117 @@
+a {
+    text-decoration: none;
+    color: unset;
+}
+body {
+	margin: 0; padding: 0;
+    height: 100%; width: 100%;
+    background: #50192C;
+}
+html {
+	height: 100%;
+}
+
+/* General Classes */
+.container {
+    width: 100%; height: 100%;
+}
+.box {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+    width: 900px; height: 400px;
+    
+    box-shadow: none;
+    animation: gains 0.2s;
+    animation-delay: 1.1s;
+    animation-fill-mode: forwards;
+}
+
+/* Image */
+.image {
+    background-image: url("../img/image.png");
+    background-size: cover;
+    background-position: center;
+    width: 0; height: 100%;
+    display: inline-block; vertical-align: top;
+}
+.separator {
+    width: 0; height: 100%;
+    display: inline-block; vertical-align: top;
+    background-image: url("../img/sep.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Menu */
+.menu {
+    width: 0; height: 100%;
+    display: inline-block; vertical-align: top;
+}
+.bar {
+    width: 100%; height: 100%;
+    background: rgb(56, 17, 31);
+    display: block;
+}
+
+.item {
+    width: 100%; height: 25%;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 15px;
+    color: transparent;
+    background: none;
+    padding: 0;
+    border: none;
+    
+    animation: fade 0.2s;
+    animation-delay: 1.1s;
+    animation-fill-mode: forwards;
+}
+.item:hover {
+    color: #fff;
+    background: rgb(124, 37, 69);
+    transition: 0.4s all;
+    cursor: pointer;
+}
+
+/* ANIMATIONS */
+.one {
+    animation: image 0.8s;
+    animation-fill-mode: forwards;
+}
+.two {
+    animation: other 0.4s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.three {
+    animation: other 0.4s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.four {
+    animation: other 0.4s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes image {
+    0% { width: 0; }
+    100% { width: 34%; }
+}
+@keyframes other {
+    0% { width: 0; }
+    100% { width: 11% }
+}
+@keyframes fade {
+    0% { color: transparent; }
+    100% { color: rgb(179, 53, 99); }
+}
+@keyframes gains {
+    0% { box-shadow: none; }
+    100% { box-shadow: 0px 1px 6px #000; }
+}

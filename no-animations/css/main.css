@@ -22,8 +22,9 @@ html {
     display: block;
     margin: 0 auto;
     font-size: 0;
+    text-align: center;
     width: 900px; height: 400px;
-    box-shadow: 3px 3px 10px #000;
+    box-shadow: 0px 1px 6px #000;
 }
 
 /* Image */
@@ -37,7 +38,7 @@ html {
 .separator {
     width: 11%; height: 100%;
     display: inline-block; vertical-align: top;
-    background-image: url("../img/e.png");
+    background-image: url("../img/sep.png");
     background-position: center;
     background-size: cover;
 }
@@ -57,13 +58,52 @@ html {
     width: 100%; height: 25%;
     font-family: 'Cantarell', sans-serif;
     font-size: 15px;
-    color: rgb(179, 53, 99);
+    color: rgb(179, 53, 99);;
     background: none;
     padding: 0;
     border: none;
-    transition: 0.4s all;
 }
 .item:hover {
     color: #fff;
     background: rgb(124, 37, 69);
+    transition: 0.4s all;
+    cursor: pointer;
+}
+
+/* ANIMATIONS */
+.one {
+    animation: image 0.8s;
+    animation-fill-mode: forwards;
+}
+.two {
+    animation: other 0.4s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.three {
+    animation: other 0.4s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.four {
+    animation: other 0.4s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes image {
+    0% { width: 0; }
+    100% { width: 34%; }
+}
+@keyframes other {
+    0% { width: 0; }
+    100% { width: 11% }
+}
+@keyframes fade {
+    0% { color: transparent; }
+    100% { color: rgb(179, 53, 99); }
+}
+@keyframes gains {
+    0% { box-shadow: none; }
+    100% { box-shadow: 0px 1px 6px #000; }
 }
